@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.garoto.musscout.DisplayRobotScout">
+
+   <android.support.constraint.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <Button
+           android:id="@+id/button"
+           android:layout_width="89dp"
+           android:layout_height="47dp"
+           android:layout_marginRight="28dp"
+           android:onClick="countIN"
+           android:text="+"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="473dp" />
+
+       <TextView
+           android:id="@+id/counterValue"
+           android:layout_width="89dp"
+           android:layout_height="47dp"
+           android:text="Click Counter"
+           app:layout_constraintHorizontal_bias="0.501"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="474dp" />
+
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Autonomous"
+           android:textSize="20dp"
+           app:layout_constraintHorizontal_bias="0.501"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <CheckBox
+           android:id="@+id/checkBox"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Crossed Auto Line"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Auto Cube Location"
+           android:textSize="20dp"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox"
+           tools:layout_editor_absoluteX="103dp" />
+
+       <RadioButton
+           android:id="@+id/checkBox2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="No Cube Attempt"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+       <RadioButton
+           android:id="@+id/checkBox5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Switch Attempted"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+       <RadioButton
+           android:id="@+id/checkBox6"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Scale Attempted"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+       <RadioButton
+           android:id="@+id/checkBox7"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Scale Successful"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+
+       <RadioButton
+           android:id="@+id/checkBox8"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="8dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:text="Switch Successful"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+       <View
+           android:id="@+id/view"
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@android:color/darker_gray"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="364dp" />
+
+       <TextView
+           android:id="@+id/textView4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:text="Tele-Op Scouting"
+           android:textSize="20dp"
+           app:layout_constraintHorizontal_bias="0.502"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/view" />
+
+       <CheckBox
+           android:id="@+id/checkBox3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Cube on the Wrong Side of Scale/Switch"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+       <Button
+           android:id="@+id/button5"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:layout_marginLeft="16dp"
+           android:text="-"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="473dp" />
+
+       <TextView
+           android:id="@+id/textView7"
+           android:layout_width="wrap_content"
+           android:layout_height="14dp"
+           android:text="TextView"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="1749dp" />
+
+       <Button
+           android:id="@+id/button6"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:layout_marginLeft="16dp"
+           android:text="-"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="585dp" />
+
+       <TextView
+           android:id="@+id/textView8"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Alliance Switch"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="428dp" />
+
+       <Button
+           android:id="@+id/button7"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:layout_marginRight="4dp"
+           android:text="+"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="582dp" />
+
+       <TextView
+           android:id="@+id/textView12"
+           android:layout_width="89dp"
+           android:layout_height="47dp"
+           android:text="Click Counter"
+           app:layout_constraintHorizontal_bias="0.501"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="581dp" />
+
+       <TextView
+           android:id="@+id/textView15"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Center Scale"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="545dp" />
+
+       <Button
+           android:id="@+id/button8"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:layout_marginLeft="16dp"
+           android:text="-"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="715dp" />
+
+       <Button
+           android:id="@+id/button9"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:layout_marginRight="16dp"
+           android:text="+"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="720dp" />
+
+       <TextView
+           android:id="@+id/textView23"
+           android:layout_width="88dp"
+           android:layout_height="41dp"
+           android:text="Click Counter"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="728dp" />
+
+       <TextView
+           android:id="@+id/textView24"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Opponent Switch"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="671dp" />
+
+       <TextView
+           android:id="@+id/textView25"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Exchange Counter"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="801dp" />
+
+       <TextView
+           android:id="@+id/textView26"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Counter"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="853dp" />
+
+       <Button
+           android:id="@+id/button10"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:text="-"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="842dp" />
+
+       <Button
+           android:id="@+id/button11"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="16dp"
+           android:text="+"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="842dp" />
+
+       <TextView
+           android:id="@+id/textView27"
+           android:layout_width="89"
+           android:layout_height="47"
+           android:text="Power Up"
+           app:layout_constraintHorizontal_bias="0.501"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="917dp" />
+
+       <CheckBox
+           android:id="@+id/radioButton12"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:text="Force"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="974dp" />
+
+       <CheckBox
+           android:id="@+id/radioButton13"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Boost"
+           app:layout_constraintHorizontal_bias="0.501"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="978dp" />
+
+       <CheckBox
+           android:id="@+id/radioButton14"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="28dp"
+           android:text="Levitate"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="979dp" />
+
+       <View
+           android:id="@+id/view1"
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@android:color/darker_gray"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="1097dp" />
+
+       <TextView
+           android:id="@+id/textView28"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:text="Robot End Game Scouting"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="@+id/view1" />
+
+       <CheckBox
+           android:id="@+id/checkBox4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Any Cubes on Wrong Side of Scale/Switch"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           tools:layout_editor_absoluteY="1037dp" />
+
+       <TextView
+           android:id="@+id/textView29"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:text="End Game:"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="1164dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton15"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Not Parked on Platform "
+           tools:layout_editor_absoluteX="50dp"
+           tools:layout_editor_absoluteY="1203dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton16"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Parked on Platform "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton15"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton17"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Attempted to Hook onto Bar "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton16"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton18"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Attempted to Attach to a Robot "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton17"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton19"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Attempted to Carry a Robot "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton18"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton20"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Hooked bar and Attempted Climb "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton19"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton21"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Successful Climb on Another Robot "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton20"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton22"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Successful Climb with Another Robot Attached "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton21"
+           tools:layout_editor_absoluteX="48dp" />
+
+       <RadioButton
+           android:id="@+id/radioButton23"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:text="Successful Climb on Own "
+           app:layout_constraintTop_toBottomOf="@+id/radioButton22"
+           tools:layout_editor_absoluteX="50dp" />
+
+       <CheckBox
+           android:id="@+id/checkBox9"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:text="Defended Against Opponents  "
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="1611dp" />
+
+       <CheckBox
+           android:id="@+id/checkBox10"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="16dp"
+           android:text="Defense Played Against Them"
+           app:layout_constraintStart_toStartOf="parent"
+           tools:layout_editor_absoluteY="1663dp" />
+
+       <TextView
+           android:id="@+id/textView30"
+           android:layout_width="94dp"
+           android:layout_height="29dp"
+           android:layout_marginLeft="16dp"
+           android:text="Defense"
+           app:layout_constraintLeft_toLeftOf="parent"
+           tools:layout_editor_absoluteY="1570dp" />
+
+   </android.support.constraint.ConstraintLayout>
+</ScrollView>

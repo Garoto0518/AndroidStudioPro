@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:addStatesFromChildren="false"
+    tools:context="com.garoto.musscout.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pitScoutSubmit"
+            android:text="@string/button_submit"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="843dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Wheel Type"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="90dp" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:hint="Enter wheel type here:"
+            android:inputType="textPersonName"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="90dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Drive Train"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="What type of Drive train do you team have?"
+            android:inputType="textPersonName"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Mechanism"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="201dp" />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="What type of mechanism you have?"
+            android:inputType="textPersonName"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="201dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Switch?"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:hint="Comments:"
+            android:inputType="textPersonName"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="575dp" />
+
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="Enter Team Number here:"
+            android:inputType="textPersonName"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:text="Team Number"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="317dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:text="No"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="317dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="80dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:text="Scale?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="308dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            tools:layout_editor_absoluteX="291dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="79dp"
+            android:layout_height="37dp"
+            android:text="Auto?"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Robot Weight"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <EditText
+            android:id="@+id/editText15"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="enter how much robot weights"
+            android:inputType="textPersonName"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="426dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="16dp"
+            android:text="Cubes per match"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="512dp" />
+
+        <EditText
+            android:id="@+id/editText16"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Cubes by themselves?"
+            android:inputType="textPersonName"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="497dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="76dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="16dp"
+            android:text="Regionals?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="641dp" />
+
+        <EditText
+            android:id="@+id/editText17"
+            android:layout_width="264dp"
+            android:layout_height="49dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="How many regionals attending?"
+            android:inputType="textPersonName"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="641dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="87dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="16dp"
+            android:text="Robot Height"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="714dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="81dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:text="Visioning?"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="778dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes?"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="778dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="778dp" />
+
+        <EditText
+            android:id="@+id/editText18"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Ask for exact height of robot?"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="723dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
