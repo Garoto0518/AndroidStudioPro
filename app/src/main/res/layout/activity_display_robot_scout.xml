@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.garoto.musscout.DisplayRobotScout">
+    tools:context="com.garoto.musscout.DisplayRobotScout"
+    android:background="#4cbb17">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
             android:layout_marginRight="28dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="32dp"
+            android:background="#FFA500"
             android:onClick="countIN"
             android:text="+"
             app:layout_constraintRight_toRightOf="parent"
@@ -60,11 +62,14 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Auto Cube Location"
             android:textSize="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox"
-            tools:layout_editor_absoluteX="103dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
         <RadioButton
             android:id="@+id/checkBox2"
@@ -149,7 +154,7 @@
             android:text="Cube on the Wrong Side of Scale/Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
 
         <Button
             android:id="@+id/button5"
@@ -158,6 +163,7 @@
             android:layout_marginEnd="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
+            android:background="#FFA500"
             android:text="-"
             app:layout_constraintEnd_toStartOf="@+id/counterValue"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -170,8 +176,9 @@
             android:layout_marginEnd="40dp"
             android:layout_marginLeft="28dp"
             android:layout_marginTop="32dp"
+            android:background="#FFA500"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintEnd_toStartOf="@+id/tv"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button5" />
 
@@ -186,19 +193,21 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/bt"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="48dp"
             android:layout_marginTop="32dp"
+            android:background="#FFA500"
+            android:onClick="countIN"
             android:text="+"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toEndOf="@+id/tv"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tv"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginTop="8dp"
@@ -222,9 +231,10 @@
             android:id="@+id/button8"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="56dp"
+            android:background="#FFA500"
             android:text="-"
             app:layout_constraintEnd_toStartOf="@+id/textView24"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -237,10 +247,12 @@
             android:layout_marginRight="28dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="56dp"
+            android:background="#FFA500"
+            android:onClick="coutnIN"
             android:text="+"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView23"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintTop_toBottomOf="@+id/bt" />
 
         <TextView
             android:id="@+id/textView23"
@@ -260,7 +272,7 @@
             android:text="Opponent Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
 
         <TextView
             android:id="@+id/textView25"
@@ -277,7 +289,7 @@
             android:id="@+id/textView26"
             android:layout_width="77dp"
             android:layout_height="45dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:text="Counter"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -289,7 +301,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="56dp"
+            android:background="#FFA500"
             android:text="-"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -298,8 +311,10 @@
             android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="28dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="56dp"
+            android:background="#FFA500"
+            android:onClick="countIN"
             android:text="+"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button9" />
@@ -319,9 +334,9 @@
             android:id="@+id/radioButton12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="52dp"
+            android:layout_marginEnd="72dp"
             android:layout_marginLeft="28dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="52dp"
             android:text="Force"
             app:layout_constraintEnd_toStartOf="@+id/radioButton13"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -331,7 +346,7 @@
             android:id="@+id/radioButton13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:text="Boost"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -375,7 +390,7 @@
             android:id="@+id/checkBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:text="Any Cubes on Wrong Side of Scale/Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -476,21 +491,19 @@
             android:id="@+id/checkBox9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:text="Defended Against Opponents  "
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+            app:layout_constraintTop_toBottomOf="@+id/textView30"
+            tools:layout_editor_absoluteX="16dp" />
 
         <CheckBox
             android:id="@+id/checkBox10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Defense Played Against Them"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox9"
+            tools:layout_editor_absoluteX="16dp" />
 
         <TextView
             android:id="@+id/textView30"
@@ -498,7 +511,7 @@
             android:layout_height="29dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:text="Defense"
+            android:text="Defense:"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton23" />
 
@@ -519,8 +532,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
             android:text="Estimated time Scale Posession"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
@@ -529,11 +542,9 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:text="Estimated time Switch Posession"
-            app:layout_constraintEnd_toStartOf="@+id/editText2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -541,17 +552,21 @@
             android:id="@+id/editText2"
             android:layout_width="131dp"
             android:layout_height="34dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
-            tools:layout_editor_absoluteX="238dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
             android:text="Estimated opponent switch posession"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -560,29 +575,35 @@
             android:id="@+id/editText3"
             android:layout_width="129dp"
             android:layout_height="34dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="1220dp" />
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
+            android:background="#000000"
+            android:onClick="mainMenu"
             android:text="Submit"
+            android:textColor="#FFFFFF"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+            app:layout_constraintTop_toBottomOf="@+id/editText9" />
 
         <TextView
             android:id="@+id/textView31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="44dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:text="Team Number"
             app:layout_constraintEnd_toStartOf="@+id/editText4"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -604,9 +625,9 @@
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="36dp"
             android:text="Match Number"
             app:layout_constraintEnd_toStartOf="@+id/editText5"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -628,10 +649,13 @@
             android:id="@+id/textView33"
             android:layout_width="55dp"
             android:layout_height="28dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:text="Scouter"
+            app:layout_constraintEnd_toStartOf="@+id/editText6"
+            app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -641,13 +665,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
-            android:layout_marginStart="68dp"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Type in your name"
+            android:inputType="textPersonName"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView33"
             app:layout_constraintTop_toTopOf="parent" />
 
         <android.support.v4.view.ViewPager
@@ -665,10 +687,47 @@
             android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Button"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="1892dp" />
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Penalties:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="What penalties did they get?"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <CheckBox
+            android:id="@+id/checkBox11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="144dp"
+            android:layout_marginTop="8dp"
+            android:text="2 Cube Auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
