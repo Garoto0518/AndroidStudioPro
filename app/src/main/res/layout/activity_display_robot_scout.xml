@@ -17,24 +17,21 @@
             android:layout_height="47dp"
             android:layout_marginRight="28dp"
             android:layout_marginStart="44dp"
-            android:layout_marginTop="32dp"
             android:background="#FFA500"
             android:onClick="countIN"
             android:text="+"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/counterValue"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            tools:layout_editor_absoluteY="695dp" />
 
         <TextView
             android:id="@+id/counterValue"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="Click Counter"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:layout_editor_absoluteX="148dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -62,72 +59,89 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Auto Cube Location"
             android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/autoCubeLocationDec"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
-        <RadioButton
-            android:id="@+id/checkBox2"
+        <RadioGroup
+            android:id="@+id/autoCubeLocationDec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="No Cube Attempt"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <RadioButton
-            android:id="@+id/checkBox5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Switch Attempted"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-        <RadioButton
-            android:id="@+id/checkBox6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Scale Attempted"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-
-        <RadioButton
-            android:id="@+id/checkBox7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Scale Successful"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
-
-        <RadioButton
-            android:id="@+id/checkBox8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView3"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Switch Successful"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+            tools:layout_editor_absoluteY="338dp">
+
+
+            <RadioButton
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Cube Attempt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <RadioButton
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Switch Attempted"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+            <RadioButton
+                android:id="@+id/checkBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Scale Attempted"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+            <RadioButton
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Scale Successful"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+
+            <RadioButton
+                android:id="@+id/checkBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Switch Successful"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+        </RadioGroup>
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="6dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -138,7 +152,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:text="Tele-Op Scouting"
             android:textSize="20dp"
             app:layout_constraintHorizontal_bias="0.502"
@@ -162,12 +176,11 @@
             android:layout_height="47dp"
             android:layout_marginEnd="40dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
             android:background="#FFA500"
             android:text="-"
             app:layout_constraintEnd_toStartOf="@+id/counterValue"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            tools:layout_editor_absoluteY="695dp" />
 
         <Button
             android:id="@+id/button6"
@@ -197,7 +210,7 @@
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginRight="16dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
             android:onClick="countIN"
@@ -212,10 +225,8 @@
             android:layout_height="47dp"
             android:layout_marginTop="8dp"
             android:text="Click Counter"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            tools:layout_editor_absoluteX="148dp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -231,37 +242,34 @@
             android:id="@+id/button8"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
             android:background="#FFA500"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/textView24"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button6" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginRight="28dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="48dp"
             android:background="#FFA500"
             android:onClick="coutnIN"
             android:text="+"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt" />
 
         <TextView
             android:id="@+id/textView23"
             android:layout_width="88dp"
             android:layout_height="41dp"
-            android:layout_marginTop="8dp"
             android:text="Click Counter"
+            app:layout_constraintEnd_toStartOf="@+id/button9"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button8"
             app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
         <TextView
@@ -289,11 +297,12 @@
             android:id="@+id/textView26"
             android:layout_width="77dp"
             android:layout_height="45dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="Counter"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button11"
+            app:layout_constraintStart_toEndOf="@+id/button10"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <Button
@@ -301,18 +310,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
             android:background="#FFA500"
             android:text="-"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button8" />
 
         <Button
             android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="48dp"
             android:background="#FFA500"
             android:onClick="countIN"
             android:text="+"
@@ -334,36 +345,33 @@
             android:id="@+id/radioButton12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
             android:layout_marginLeft="28dp"
-            android:layout_marginTop="52dp"
             android:text="Force"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton13"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button10" />
+            tools:layout_editor_absoluteY="1056dp" />
 
         <CheckBox
             android:id="@+id/radioButton13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
             android:text="Boost"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton14"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioButton12"
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
         <CheckBox
             android:id="@+id/radioButton14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginRight="28dp"
             android:text="Levitate"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/radioButton13"
-            app:layout_constraintTop_toBottomOf="@+id/button11" />
+            tools:layout_editor_absoluteY="1056dp" />
 
         <View
             android:id="@+id/view1"
@@ -390,7 +398,7 @@
             android:id="@+id/checkBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:text="Any Cubes on Wrong Side of Scale/Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -406,86 +414,102 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-        <RadioButton
-            android:id="@+id/radioButton15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Not Parked on Platform "
-            app:layout_constraintTop_toBottomOf="@+id/textView29"
-            tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton16"
+        <RadioGroup
+            android:id="@+id/radioGroup1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView25"
             android:layout_marginTop="8dp"
-            android:text="Parked on Platform "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton15"
-            tools:layout_editor_absoluteX="50dp" />
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView29">
 
-        <RadioButton
-            android:id="@+id/radioButton17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Attempted to Hook onto Bar "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton16"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Parked on Platform "
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="1405dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Attempted to Attach to a Robot "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton17"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Parked on Platform "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton15"
+                tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Attempted to Carry a Robot "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton18"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Attempted to Hook onto Bar "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton16"
+                tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Hooked bar and Attempted Climb "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton19"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Attempted to Attach to a Robot "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton17"
+                tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Successful Climb on Another Robot "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton20"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Attempted to Carry a Robot "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton18"
+                tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Successful Climb with Another Robot Attached "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton21"
-            tools:layout_editor_absoluteX="48dp" />
+            <RadioButton
+                android:id="@+id/radioButton20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Hooked bar and Attempted Climb "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton19"
+                tools:layout_editor_absoluteX="50dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Successful Climb on Own "
-            app:layout_constraintTop_toBottomOf="@+id/radioButton22"
-            tools:layout_editor_absoluteX="50dp" />
+            <RadioButton
+                android:id="@+id/radioButton21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Successful Climb on Another Robot "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton20"
+                tools:layout_editor_absoluteX="50dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Successful Climb with Another Robot Attached "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton21"
+                tools:layout_editor_absoluteX="48dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Successful Climb on Own "
+                app:layout_constraintTop_toBottomOf="@+id/radioButton22"
+                tools:layout_editor_absoluteX="50dp" />
+        </RadioGroup>
 
         <CheckBox
             android:id="@+id/checkBox9"
@@ -510,21 +534,24 @@
             android:layout_width="94dp"
             android:layout_height="29dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="Defense:"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton23" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="131dp"
+            android:layout_width="102dp"
             android:layout_height="34dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginRight="16dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.843"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
@@ -532,7 +559,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:text="Estimated time Scale Posession"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -543,21 +570,24 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:text="Estimated time Switch Posession"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="131dp"
+            android:layout_width="102dp"
             android:layout_height="34dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginRight="16dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -565,18 +595,17 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="Estimated opponent switch posession"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
             android:id="@+id/editText3"
-            android:layout_width="129dp"
+            android:layout_width="102dp"
             android:layout_height="34dp"
             android:layout_marginRight="16dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
@@ -588,11 +617,13 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="#000000"
             android:onClick="mainMenu"
             android:text="Submit"
             android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText9" />
@@ -683,16 +714,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Button"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
-
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
@@ -721,13 +742,13 @@
             android:id="@+id/checkBox11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="4dp"
             android:layout_marginLeft="144dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="2 Cube Auto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+            app:layout_constraintTop_toBottomOf="@+id/autoCubeLocationDec" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

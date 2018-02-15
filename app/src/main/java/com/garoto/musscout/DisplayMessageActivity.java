@@ -16,6 +16,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     public void robotScout(View view){
         Intent startMainScreen = new Intent(this, DisplayRobotScout.class);
         startActivity(startMainScreen);
+
     }
     public void pitScout(View view){
         Intent startScreen = new Intent(this, MainActivity.class);

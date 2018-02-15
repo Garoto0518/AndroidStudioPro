@@ -13,28 +13,32 @@
         android:layout_width="match_parent">
 
 
-
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
             android:text="Wheel Type"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <EditText
             android:id="@+id/editText7"
-            android:layout_width="wrap_content"
+            android:layout_width="197dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
-            android:hint="Enter wheel type here:"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:hint="Enter robot  wheel type here:"
             android:inputType="textPersonName"
             android:textSize="12dp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.653"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/editText13" />
 
         <TextView
@@ -52,13 +56,15 @@
             android:id="@+id/editText8"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="What type of Drive train do you team have?"
             android:inputType="textPersonName"
             android:textSize="12dp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
         <TextView
@@ -66,7 +72,7 @@
             android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="Mechanism"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -74,33 +80,34 @@
 
         <EditText
             android:id="@+id/editText10"
-            android:layout_width="207dp"
+            android:layout_width="217dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="What type of mechanism you have?"
             android:inputType="textPersonName"
             android:textSize="12dp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="80dp"
             android:layout_height="33dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
             android:text="Switch?"
-            android:textSize="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
             android:id="@+id/editText12"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="354dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="Comments:"
             android:inputType="textPersonName"
@@ -111,15 +118,17 @@
 
         <EditText
             android:id="@+id/editText13"
-            android:layout_width="wrap_content"
+            android:layout_width="159dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="Enter Team Number here:"
             android:inputType="textPersonName"
             android:textSize="12dp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -133,75 +142,108 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/switchDec"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Yes"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton2"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="16dp"
-            android:text="No"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintHorizontal_bias="0.852"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/editText10">
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="12dp"
-            android:text="Yes"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton4"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
 
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/scaleDec"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="36dp"
-            android:layout_marginTop="12dp"
-            android:text="No"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.868"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/switchDec">
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                app:layout_constraintEnd_toStartOf="@+id/radioButton4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:text="No"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RadioGroup>
+
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="80dp"
             android:layout_height="33dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="Scale?"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/autoDec"
+            android:layout_width="148dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:text="Yes"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton6"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="12dp"
-            android:text="No"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/scaleDec">
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>>
 
         <TextView
             android:id="@+id/textView17"
@@ -218,33 +260,39 @@
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="23dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
             android:text="Robot Weight"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <EditText
             android:id="@+id/editText15"
-            android:layout_width="252dp"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="152dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="enter how much robot weights"
+            android:hint="enter  robot weight"
             android:inputType="textPersonName"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintStart_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/autoDec" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
             android:text="Cubes per match"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
         <EditText
@@ -252,97 +300,115 @@
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="28dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Cubes by themselves?"
             android:inputType="textPersonName"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/editText15" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="76dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="92dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
             android:text="Regionals?"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
         <EditText
             android:id="@+id/editText17"
             android:layout_width="266dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="How many regionals attending?"
             android:inputType="textPersonName"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText16" />
+            app:layout_constraintStart_toEndOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="87dp"
             android:layout_height="39dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Robot Height"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="81dp"
             android:layout_height="32dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="Visioning?"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-        <RadioButton
-            android:id="@+id/radioButton9"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/visioningDec"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="64dp"
-            android:layout_marginTop="20dp"
-            android:text="Yes"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton10"
-            app:layout_constraintTop_toBottomOf="@+id/editText18" />
-
-        <RadioButton
-            android:id="@+id/radioButton10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginEnd="8dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:text="No"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.792"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText18" />
+            app:layout_constraintStart_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/editText18">
+
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/editText18"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="84dp"
             android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="Ask for exact height of robot?"
             android:inputType="textPersonName"
             android:textSize="12sp"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/editText17" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="28dp"
             android:background="#000"
             android:onClick="mainMenu"
             android:text="Submit"
             android:textColor="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
