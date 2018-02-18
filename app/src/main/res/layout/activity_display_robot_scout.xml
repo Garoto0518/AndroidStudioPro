@@ -5,35 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.garoto.musscout.DisplayRobotScout"
-    android:background="#4cbb17">
+    android:background="#1F730E">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/plusBtn"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="44dp"
             android:layout_marginTop="8dp"
             android:background="#FFA500"
-            android:onClick="countIN"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/counterValue"
+            app:layout_constraintStart_toEndOf="@+id/counterTxt"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/counterValue"
+            android:id="@+id/counterTxt"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:text="Click Counter"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -175,27 +173,34 @@
             app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/minusBtn"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:background="#FFA500"
-            android:onClick="countDown"
             android:text="-"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="300dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/minusBtn1"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="36dp"
             android:background="#FFA500"
             android:text="-"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
+            app:layout_constraintTop_toBottomOf="@+id/minusBtn" />
 
         <TextView
             android:id="@+id/textView8"
@@ -208,28 +213,26 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
-            android:id="@+id/bt"
+            android:id="@+id/plusBtn1"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="40dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
-            android:onClick="countIN"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/tv"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintStart_toEndOf="@+id/counterTxt1"
+            app:layout_constraintTop_toBottomOf="@+id/plusBtn" />
 
         <TextView
-            android:id="@+id/tv"
+            android:id="@+id/counterTxt1"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Click Counter"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -242,15 +245,12 @@
             android:text="Center Scale"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/counterValue" />
+            app:layout_constraintTop_toBottomOf="@+id/counterTxt" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
             android:text="-"
@@ -258,24 +258,20 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6" />
+            app:layout_constraintTop_toBottomOf="@+id/minusBtn1" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="89dp"
             android:layout_height="47dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:background="#FFA500"
-            android:onClick="coutnIN"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView23"
-            app:layout_constraintTop_toBottomOf="@+id/bt" />
+            app:layout_constraintTop_toBottomOf="@+id/plusBtn1" />
 
         <TextView
             android:id="@+id/textView23"
@@ -296,7 +292,7 @@
             android:text="Opponent Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv" />
+            app:layout_constraintTop_toBottomOf="@+id/counterTxt1" />
 
         <TextView
             android:id="@+id/textView25"
@@ -326,9 +322,6 @@
             android:id="@+id/button10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
             android:text="-"
@@ -342,11 +335,9 @@
             android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="44dp"
+
             android:layout_marginTop="44dp"
             android:background="#FFA500"
-            android:onClick="countIN"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -368,7 +359,6 @@
             android:id="@+id/radioButton12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="52dp"
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Force"
@@ -391,34 +381,23 @@
             android:id="@+id/radioButton14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="36dp"
+
             android:layout_marginTop="8dp"
             android:text="Levitate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/radioButton13"
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-        <View
-            android:id="@+id/view1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="152dp"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
         <TextView
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:text="Robot End Game Scouting"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view1" />
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -539,6 +518,7 @@
 
         <CheckBox
             android:id="@+id/checkBox9"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -649,7 +629,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="#000000"
-            android:onClick="mainMenu"
             android:text="Submit"
             android:textColor="#FFFFFF"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -660,7 +639,6 @@
             android:id="@+id/textView31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="44dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
             android:text="Team Number"
@@ -672,7 +650,6 @@
             android:id="@+id/editText4"
             android:layout_width="239dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="What team are you scouting?"
@@ -684,7 +661,6 @@
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="36dp"
             android:text="Match Number"
@@ -708,7 +684,6 @@
             android:id="@+id/textView33"
             android:layout_width="55dp"
             android:layout_height="28dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
@@ -746,9 +721,11 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:text="Penalties:"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
 
@@ -770,25 +747,25 @@
             android:id="@+id/checkBox11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:layout_marginLeft="144dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="2 Cube Auto"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCubeLocationDec" />
-
         <Button
             android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="160dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Button"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button4" />
+        <!--start of crazy studdd-->
+
+
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

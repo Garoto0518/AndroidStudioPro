@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MusScout</string>
+    <string name="app_name">FRC 4592 2018 Scout System</string>
     <string name="button_submit">Submit</string>
     <string name="robot_scout">Robot Scout</string>
 </resources>
