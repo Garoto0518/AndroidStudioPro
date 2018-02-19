@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1F730E"
+    android:background="#216C2A"
     tools:context="com.garoto.musscout.DisplayRobotScout">
 
     <android.support.constraint.ConstraintLayout
@@ -170,15 +170,15 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <CheckBox
-            android:buttonTint="#FFA500"
             android:id="@+id/checkBox3"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:layout_marginTop="8dp"
+            android:buttonTint="#FFA500"
             android:text="Cube on the Wrong Side of Scale/Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
         <Button
             android:id="@+id/minusBtn"
@@ -442,7 +442,7 @@ android:buttonTint="#FFA500"
 
 
         <RadioGroup
-            android:id="@+id/radioGroup1"
+            android:id="@+id/endGameRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -574,7 +574,7 @@ android:buttonTint="#FFA500"
             android:layout_marginTop="24dp"
             android:text="Defense:"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
+            app:layout_constraintTop_toBottomOf="@+id/endGameRadioGroup" />
 
         <EditText
             android:id="@+id/editText"
@@ -778,11 +778,13 @@ android:buttonTint="#FFA500"
             android:id="@+id/checkBox11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:buttonTint="#FFA500"
             android:layout_marginTop="8dp"
+            android:buttonTint="#FFA500"
             android:text="2 Cube Auto"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCubeLocationDec" />
 
@@ -796,6 +798,76 @@ android:buttonTint="#FFA500"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/robotSubmit" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox11">
+
+            <RadioButton
+                android:id="@+id/scale2CubeAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFA500"
+                android:text="Scale 2 Cube Auto" />
+
+            <RadioButton
+                android:id="@+id/switch2CubeAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFA500"
+                android:text="Switch 2 Cube Auto" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBox12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:buttonTint="#FFA500"
+            android:orientation="vertical"
+            android:text="3 Cube Auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFA500"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox12">
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#FFA500"
+                android:text="Scale 3 Cube Auto" />
+
+            <RadioButton
+                android:id="@+id/radioButton24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFA500"
+                android:buttonTint="#FFA500"
+                android:text="Switch 3 Cube Auto" />
+        </RadioGroup>
         <!--start of crazy studdd-->
 
 
