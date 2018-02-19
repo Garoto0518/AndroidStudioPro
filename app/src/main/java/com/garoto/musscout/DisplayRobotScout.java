@@ -1,11 +1,10 @@
 package com.garoto.musscout;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+//import android.widget.Button;
+//import android.widget.EditText;
 import android.widget.TextView;
 
 public class DisplayRobotScout extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class DisplayRobotScout extends AppCompatActivity {
         scaleTextView = (TextView) findViewById(R.id.scaleTextView);
         opponentTextView = (TextView) findViewById(R.id.opponentTextView);
         exchangeTextView = (TextView) findViewById(R.id.exchangeTextView);
-//        Button robotSubmit = (Button)findViewById(R.id.robotSubmit);
+        //        Button robotSubmit = (Button)findViewById(R.id.robotSubmit);
 //
 //        robotSubmit.setOnClickListener(new View.OnClickListener(){
 //            @Override
