@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.garoto.musscout.DisplayRobotScout"
-    android:background="#1F730E">
+    android:background="#1F730E"
+    tools:context="com.garoto.musscout.DisplayRobotScout">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,19 +17,20 @@
             android:layout_height="47dp"
             android:layout_marginTop="8dp"
             android:background="#FFA500"
+            android:onClick="allianceCounterInc"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/counterTxt"
+            app:layout_constraintStart_toEndOf="@+id/allianceTextView"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/counterTxt"
+            android:id="@+id/allianceTextView"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:text="Click Counter"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
         <CheckBox
+            android:buttonTint="#FFA500"
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
 
 
             <RadioButton
+                android:buttonTint="#FFA500"
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,6 +100,7 @@
                 tools:layout_editor_absoluteY="329dp" />
 
             <RadioButton
+                android:buttonTint="#FFA500"
                 android:id="@+id/checkBox5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,6 +111,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
             <RadioButton
+                android:buttonTint="#FFA500"
                 android:id="@+id/checkBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -117,6 +122,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
             <RadioButton
+                android:buttonTint="#FFA500"
                 android:id="@+id/checkBox7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,6 +133,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
 
             <RadioButton
+                android:buttonTint="#FFA500"
                 android:id="@+id/checkBox8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,6 +170,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <CheckBox
+            android:buttonTint="#FFA500"
             android:id="@+id/checkBox3"
             android:layout_width="wrap_content"
             android:layout_height="28dp"
@@ -178,6 +186,7 @@
             android:layout_height="47dp"
             android:layout_marginTop="4dp"
             android:background="#FFA500"
+            android:onClick="allianceCounterDec"
             android:text="-"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -192,12 +201,14 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
         <Button
             android:id="@+id/minusBtn1"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginTop="36dp"
             android:background="#FFA500"
+            android:onClick="scaleCounterDec"
             android:text="-"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/minusBtn" />
@@ -218,14 +229,15 @@
             android:layout_height="47dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
+            android:onClick="scaleCounterInc"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/counterTxt1"
+            app:layout_constraintStart_toEndOf="@+id/scaleTextView"
             app:layout_constraintTop_toBottomOf="@+id/plusBtn" />
 
         <TextView
-            android:id="@+id/counterTxt1"
+            android:id="@+id/scaleTextView"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
@@ -245,7 +257,7 @@
             android:text="Center Scale"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/counterTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/allianceTextView" />
 
         <Button
             android:id="@+id/button8"
@@ -253,8 +265,9 @@
             android:layout_height="47dp"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
+            android:onClick="opponentCounterDec"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/textView23"
+            app:layout_constraintEnd_toStartOf="@+id/opponentTextView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -266,19 +279,21 @@
             android:layout_height="47dp"
             android:layout_marginTop="28dp"
             android:background="#FFA500"
+            android:onClick="opponentCounterInc"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView23"
+            app:layout_constraintStart_toEndOf="@+id/opponentTextView"
             app:layout_constraintTop_toBottomOf="@+id/plusBtn1" />
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/opponentTextView"
             android:layout_width="88dp"
             android:layout_height="31dp"
             android:layout_marginTop="8dp"
             android:text="Click Counter"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -289,28 +304,30 @@
             android:id="@+id/textView24"
             android:layout_width="108dp"
             android:layout_height="29dp"
+            android:layout_marginTop="8dp"
             android:text="Opponent Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/counterTxt1" />
+            app:layout_constraintTop_toBottomOf="@+id/scaleTextView" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Exchange Counter"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+            app:layout_constraintTop_toBottomOf="@+id/opponentTextView" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/exchangeTextView"
             android:layout_width="83dp"
             android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:text="Click Counter"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -324,8 +341,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="#FFA500"
+            android:onClick="exchangeCounterDec"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintEnd_toStartOf="@+id/exchangeTextView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -335,31 +353,32 @@
             android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="44dp"
             android:background="#FFA500"
+            android:onClick="exchangeCounterInc"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintStart_toEndOf="@+id/exchangeTextView"
             app:layout_constraintTop_toBottomOf="@+id/button9" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="77dp"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="Power Up"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@+id/exchangeTextView" />
 
         <CheckBox
             android:id="@+id/radioButton12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"
+            android:buttonTint="#FFA500"
             android:layout_marginTop="8dp"
             android:text="Force"
             app:layout_constraintEnd_toStartOf="@+id/radioButton13"
@@ -370,6 +389,7 @@
             android:id="@+id/radioButton13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFA500"
             android:layout_marginTop="8dp"
             android:text="Boost"
             app:layout_constraintHorizontal_bias="0.501"
@@ -381,7 +401,7 @@
             android:id="@+id/radioButton14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+android:buttonTint="#FFA500"
             android:layout_marginTop="8dp"
             android:text="Levitate"
             app:layout_constraintEnd_toEndOf="parent"
@@ -403,6 +423,7 @@
             android:id="@+id/checkBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFA500"
             android:layout_marginTop="24dp"
             android:text="Any Cubes on Wrong Side of Scale/Switch"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -439,6 +460,7 @@
                 android:id="@+id/radioButton15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="#FFA500"
                 android:text="Not Parked on Platform "
                 tools:layout_editor_absoluteX="50dp"
                 tools:layout_editor_absoluteY="1405dp" />
@@ -448,6 +470,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Parked on Platform "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton15"
                 tools:layout_editor_absoluteX="50dp" />
@@ -457,6 +480,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Attempted to Hook onto Bar "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton16"
                 tools:layout_editor_absoluteX="50dp" />
@@ -466,6 +490,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Attempted to Attach to a Robot "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton17"
                 tools:layout_editor_absoluteX="50dp" />
@@ -475,6 +500,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Attempted to Carry a Robot "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton18"
                 tools:layout_editor_absoluteX="50dp" />
@@ -484,6 +510,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Hooked bar and Attempted Climb "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton19"
                 tools:layout_editor_absoluteX="50dp" />
@@ -493,6 +520,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Successful Climb on Another Robot "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton20"
                 tools:layout_editor_absoluteX="50dp" />
@@ -502,6 +530,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Successful Climb with Another Robot Attached "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton21"
                 tools:layout_editor_absoluteX="48dp" />
@@ -511,6 +540,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:buttonTint="#FFA500"
                 android:text="Successful Climb on Own "
                 app:layout_constraintTop_toBottomOf="@+id/radioButton22"
                 tools:layout_editor_absoluteX="50dp" />
@@ -518,10 +548,10 @@
 
         <CheckBox
             android:id="@+id/checkBox9"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:buttonTint="#FFA500"
             android:text="Defended Against Opponents  "
             app:layout_constraintTop_toBottomOf="@+id/textView30"
             tools:layout_editor_absoluteX="16dp" />
@@ -531,6 +561,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:buttonTint="#FFA500"
             android:text="Defense Played Against Them"
             app:layout_constraintTop_toBottomOf="@+id/checkBox9"
             tools:layout_editor_absoluteX="16dp" />
@@ -748,11 +779,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:buttonTint="#FFA500"
             android:layout_marginTop="8dp"
             android:text="2 Cube Auto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCubeLocationDec" />
+
         <Button
             android:id="@+id/button13"
             android:layout_width="wrap_content"
@@ -764,7 +797,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button4" />
         <!--start of crazy studdd-->
-
 
 
     </android.support.constraint.ConstraintLayout>

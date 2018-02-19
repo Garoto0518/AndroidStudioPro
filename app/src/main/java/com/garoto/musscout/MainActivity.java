@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        showValue = (TextView) findViewById(R.id.counterTxt);
+        showValue = (TextView) findViewById(R.id.allianceTextView);
     }
 
 //    public void pitScoutSubmit(View view){

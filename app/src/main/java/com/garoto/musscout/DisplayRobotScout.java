@@ -1,16 +1,9 @@
 package com.garoto.musscout;
 
-import android.os.Handler;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class DisplayRobotScout extends AppCompatActivity {
     //StopWatch buttons and declarations are in line below
@@ -34,16 +27,28 @@ public class DisplayRobotScout extends AppCompatActivity {
 //            customHandler.postDelayed(this,0);
 //        }
 //    };
-    private TextView counterTxt;
-    private TextView counterTxt1;
-    private Button minusBtn;
-    private Button minusBtn1;
-    private Button plusBtn;
-    private Button plusBtn1;
-    //  private Button resetBtn;
-    private int counter;
-    private int counter1;
+//  //  private TextView counterTxt;
+//    private TextView counterTxt1;
+//    private Button minusBtn;
+//    private Button minusBtn1;
+//    private Button plusBtn;
+//    private Button plusBtn1;
+//    //  private Button resetBtn;
+//    private int counter;
+//    private int counter1;
+    private int allianceCounter = 0;
+    private TextView allianceTextView;
+    //int allianceCounterDecre = 0;
 
+    // int scaleCounter = 0;
+    private int scaleCounter = 0;
+    private TextView scaleTextView;
+
+    private int opponentCounter = 0;
+    private TextView opponentTextView;
+
+    private int exchangeCounter = 0;
+    private TextView exchangeTextView;
 
 //    TextView showValue;
 //    int counter = 0;
@@ -53,80 +58,136 @@ public class DisplayRobotScout extends AppCompatActivity {
 //    TextView txv;
 
     //Crazy stuff
-    private View.OnClickListener clickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()) {
-                case R.id.minusBtn:
-                    minusCounter();
-                    break;
-                case R.id.plusBtn:
-                    plusCounter();
-                    break;
-//                case R.id.resetBtn:
-//                    initCounter();
+//    private View.OnClickListener clickListener = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            switch (view.getId()) {
+//                case R.id.minusBtn:
+//                    minusCounter();
 //                    break;
-            }
-        }
-    };
-
-    private View.OnClickListener clickListener1 = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()){
-                case R.id.minusBtn1:
-                    minusCounter();
-                    break;
-                case R.id.plusBtn1:
-                    plusCounter();
-                    break;
-            }
-        }
-    };
+//                case R.id.plusBtn:
+//                    plusCounter();
+//                    break;
+////                case R.id.resetBtn:
+////                    initCounter();
+////                    break;
+//            }
+//        }
+//    };
+//
+//    private View.OnClickListener clickListener1 = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            switch (view.getId()) {
+//                case R.id.minusBtn1:
+//                    minusCounter();
+//                    break;
+//                case R.id.plusBtn1:
+//                    plusCounter();
+//                    break;
+//            }
+//        }
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_robot_scout);
-        counterTxt = (TextView) findViewById(R.id.counterTxt);
-        counterTxt1 = (TextView) findViewById(R.id.counterTxt1);
-        minusBtn = (Button) findViewById((R.id.minusBtn));
-        minusBtn1 = (Button) findViewById(R.id.minusBtn1);
-        minusBtn.setOnClickListener(clickListener);
-        minusBtn1.setOnClickListener(clickListener1);
-        plusBtn = (Button) findViewById(R.id.plusBtn);
-        plusBtn1 = (Button) findViewById(R.id.plusBtn1);
-        plusBtn.setOnClickListener(clickListener);
-        plusBtn1.setOnClickListener(clickListener1);
+        allianceTextView = (TextView) findViewById(R.id.allianceTextView);
+        scaleTextView = (TextView) findViewById(R.id.scaleTextView);
+        opponentTextView = (TextView) findViewById(R.id.opponentTextView);
+        exchangeTextView = (TextView) findViewById(R.id.exchangeTextView);
+//        counterTxt = (TextView) findViewById(R.id.counterTxt);
+//        counterTxt1 = (TextView) findViewById(R.id.counterTxt1);
+//        minusBtn = (Button) findViewById((R.id.minusBtn));
+//        minusBtn1 = (Button) findViewById(R.id.minusBtn1);
+//        minusBtn.setOnClickListener(clickListener);
+//        minusBtn1.setOnClickListener(clickListener1);
+//        plusBtn = (Button) findViewById(R.id.plusBtn);
+//        plusBtn1 = (Button) findViewById(R.id.plusBtn1);
+//        plusBtn.setOnClickListener(clickListener);
+//        plusBtn1.setOnClickListener(clickListener1);
 
 //        resetBtn = (Button) findViewById(R.id.resetBtn);
 //        resetBtn.setOnClickListener(clickListener);
 
-        initCounter();
+        //      initCounter();
+        //     initCounter1();
     }
 
-    private void initCounter() {
-        counter = 0;
-        counter1 = 0;
-        counterTxt.setText(counter + "");
-         counterTxt1.setText(counter1  + "");
-
+    public void allianceCounterInc(View view) {
+        allianceCounter++;
+        allianceTextView.setText(Integer.toString(allianceCounter));
     }
 
-    private void plusCounter() {
-        counter++;
-        counter1++;
-        counterTxt.setText(counter + "");
-        counterTxt1.setText(counter1 + "");
+    public void allianceCounterDec(View v) {
+        allianceCounter--;
+        allianceTextView.setText(Integer.toString(allianceCounter));
     }
 
-    private void minusCounter() {
-        counter--;
-        counter1--;
-        counterTxt.setText(counter + "");
-        counterTxt1.setText(counter1 + "");
+    public void scaleCounterInc(View view) {
+        scaleCounter++;
+        scaleTextView.setText(Integer.toString(scaleCounter));
+    }
+
+    public void scaleCounterDec(View view) {
+        scaleCounter--;
+        scaleTextView.setText(Integer.toString(scaleCounter));
+    }
+
+    public void opponentCounterInc(View view) {
+        opponentCounter++;
+        opponentTextView.setText(Integer.toString(opponentCounter));
+    }
+
+    public void opponentCounterDec(View view) {
+        opponentCounter--;
+        opponentTextView.setText(Integer.toString(opponentCounter));
+    }
+
+    public void exchangeCounterInc(View view) {
+        exchangeCounter++;
+        exchangeTextView.setText(Integer.toString(exchangeCounter));
+    }
+
+    public void exchangeCounterDec(View view) {
+        exchangeCounter--;
+        exchangeTextView.setText(Integer.toString(exchangeCounter));
     }
 }
+//    private void initCounter() {
+//        counter = 0;
+//        //  counter1 = 0;
+//        counterTxt.setText(counter + "");
+//        //   counterTxt1.setText(counter1  + "");
+//
+//    }
+//
+//    private void initCounter1() {
+//        counter1 = 0;
+//        counterTxt1.setText(counter1 + "");
+//    }
+//
+//    private void plusCounter() {
+//        counter++;
+//        //   counter1++;
+//        counterTxt.setText(counter + "");
+//        //  counterTxt1.setText(counter1 + "");
+//    }
+//
+//    private void plusCounter1() {
+//        counter1++;
+//        counterTxt1.setText(counter1 + "");
+//
+//    }
+//
+//    private void minusCounter() {
+//        counter--;
+//        counter1--;
+//        counterTxt.setText(counter + "");
+//        counterTxt1.setText(counter1 + "");
+//    }
+
 
 //        btnStart = (Button) findViewById(R.id.btnStart);
 //        btnLap = (Button) findViewById(R.id.btnLap);
