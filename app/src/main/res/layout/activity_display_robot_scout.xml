@@ -195,12 +195,12 @@
             android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="6dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="184dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <Button
             android:id="@+id/minusBtn1"
@@ -851,6 +851,7 @@ android:buttonTint="#FFA500"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox12">
 
+
             <RadioButton
                 android:id="@+id/radioButton11"
                 android:layout_width="wrap_content"
@@ -870,6 +871,73 @@ android:buttonTint="#FFA500"
         </RadioGroup>
         <!--start of crazy studdd-->
 
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="148dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4">
+
+            <TextView
+                android:id="@+id/timerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="00:00:00"
+                android:textColor="#000"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="1319dp" />
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pause" />
+
+            <Button
+                android:id="@+id/btnLap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lap" />
+            <!--<Button-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/saveLap"-->
+            <!--android:layout_below=-->
+
+            <!--/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    ></LinearLayout>
+            </ScrollView>
+        </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
