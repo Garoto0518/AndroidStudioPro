@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:addStatesFromChildren="false"
-    tools:context="com.garoto.musscout.MainActivity"
-    android:background="#FFFF00">
+    android:background="#FFFF00"
+    tools:context="com.garoto.musscout.MainActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
         <TextView
@@ -243,7 +243,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No" />
-        </RadioGroup>>
+        </RadioGroup>
+        >
 
         <TextView
             android:id="@+id/textView17"

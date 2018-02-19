@@ -655,7 +655,7 @@ android:buttonTint="#FFA500"
             app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/robotSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -670,6 +670,7 @@ android:buttonTint="#FFA500"
             android:id="@+id/textView31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
             android:text="Team Number"
@@ -692,6 +693,7 @@ android:buttonTint="#FFA500"
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="36dp"
             android:text="Match Number"
@@ -715,14 +717,12 @@ android:buttonTint="#FFA500"
             android:id="@+id/textView33"
             android:layout_width="55dp"
             android:layout_height="28dp"
+            android:layout_marginEnd="84dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:text="Scouter"
             app:layout_constraintEnd_toStartOf="@+id/editText6"
-            app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -795,7 +795,7 @@ android:buttonTint="#FFA500"
             android:text="Button"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
+            app:layout_constraintTop_toBottomOf="@+id/robotSubmit" />
         <!--start of crazy studdd-->
 
 
