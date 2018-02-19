@@ -59,6 +59,7 @@ public class DisplayRobotScout extends AppCompatActivity {
         scaleCounter--;
         scaleTextView.setText(Integer.toString(scaleCounter));
     }
+//whY?
 
     public void opponentCounterInc(View view) {
         opponentCounter++;
