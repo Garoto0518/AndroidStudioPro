@@ -10,8 +10,14 @@ import android.view.View;
 //import android.widget.Button;
 //import android.widget.EditText;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DisplayRobotScout extends AppCompatActivity {
 
@@ -47,6 +53,16 @@ public class DisplayRobotScout extends AppCompatActivity {
     private int exchangeCounter = 0;
     private TextView exchangeTextView;
 
+    private TextView scouterName;
+    private TextView teamMember;
+    private TextView matchNumber;
+
+    private CheckBox crossedAutoLine;
+
+    private RadioButton noCubeAttempt;
+
+    private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +77,12 @@ public class DisplayRobotScout extends AppCompatActivity {
         btnLap = (Button) findViewById(R.id.btnLap);
         txtTimer = (TextView) findViewById(R.id.timerValue);
         container = (LinearLayout) findViewById(R.id.container);
+        scouterName = findViewById(R.id.editText6);
+        teamMember = findViewById(R.id.editText4);
+        matchNumber = findViewById(R.id.editText5);
+
+        crossedAutoLine = findViewById(R.id.checkBox);
+        noCubeAttempt = findViewById(R.id.checkBox2);
 
         btnStart.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -88,14 +110,20 @@ public class DisplayRobotScout extends AppCompatActivity {
                 container.addView(addView);
             }
         });
-        //        Button robotSubmit = (Button)findViewById(R.id.robotSubmit);
+
+        Button robotSubmit = findViewById(R.id.robotSubmit);
 //
-//        robotSubmit.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Primera");
+        robotSubmit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
 //                Intent intent = new Intent(DisplayRobotScout.this,row.class);
-//            }
-//        });
+                RobotScout robotScout = new RobotScout(scouterName.getText().toString().trim(),teamMember.getText().toString().trim(),matchNumber.getText().toString().trim(),crossedAutoLine.isChecked(),noCubeAttempt.isChecked());
+
+                mDatabase.push().setValue(robotScout.toMap());
+
+            }
+        });
     }
 
     public void allianceCounterInc(View view) {

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MusScout.iml" filepath="$PROJECT_DIR$/MusScout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioPro.iml" filepath="$PROJECT_DIR$/AndroidStudioPro.iml" />
+      <module fileurl="file://C:\Users\felix\AndroidStudioProjects\AndroidStudioPro\MusScout.iml" filepath="C:\Users\felix\AndroidStudioProjects\AndroidStudioPro\MusScout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
