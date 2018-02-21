@@ -103,6 +103,7 @@ public class RobotScout {
     }
 
 
+    //Mapa
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
 
