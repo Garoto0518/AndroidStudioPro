@@ -13,16 +13,17 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
     }
 
-    public void robotScout(View view){
+    public void robotScout(View view) {
         Intent startMainScreen = new Intent(this, DisplayRobotScout.class);
         startActivity(startMainScreen);
-
     }
-    public void pitScout(View view){
-        Intent startScreen = new Intent(this, MainActivity.class);
+
+    public void pitScout(View view) {
+        Intent startScreen = new Intent(this, DisplayPitScout.class);
         startActivity(startScreen);
     }
-    public void mainMenu(View view){
+
+    public void mainMenu(View view) {
         Intent mainActivity = new Intent(this, DisplayMessageActivity.class);
         startActivity(mainActivity);
     }
