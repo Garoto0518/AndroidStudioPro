@@ -12,11 +12,12 @@ public class RobotScout {
     private String scouterName;
     private String teamNumber;
     private String matchNumber;
+
+
+    //Auto
     private boolean crossedAutoLine;
     private boolean noCubeAttempt;
-
     private boolean switchAttempted;
-
     private boolean scaleAttempted;
     private boolean scaleSuccessful;
     private boolean switchSuccessful;
@@ -56,7 +57,7 @@ public class RobotScout {
 
     //Defense
 
-    private boolean defendefAgainstOpponents;
+    private boolean defenseAgainstOpponents;
     private boolean defensePlayedAgainstThem;
     private String penalties;
 
@@ -66,7 +67,7 @@ public class RobotScout {
                       String allianceSwitch, String centerScale, String opponentSwitch, String exchangeSwitch, boolean powerUpForce, boolean powerUpBoost, boolean powerUpLevitate, boolean anyCubeOnWrongSideScaleSwitch,
                       String estimatedTimeScalePossesion, String estimatedTimeSwitchPossesion, String estimatedOpponentSwitchPossesion, boolean notParkedOnPlatform, boolean parkedOnPlatform, boolean attemptedHookBar,
                       boolean attemptedAttachRobot, boolean attemptedCarryRobot, boolean hookedBarAttemptedClimb, boolean successfulClimbOnAnotherRobot, boolean succesfulClimbWithAnotherRobotAttached,
-                      boolean succesfulClimbOwn, boolean defendefAgainstOpponents, boolean defensePlayedAgainstThem, String penalties) {
+                      boolean succesfulClimbOwn, boolean defenseAgainstOpponents, boolean defensePlayedAgainstThem, String penalties) {
 
         this.scouterName = scouterName;
         this.teamNumber = teamNumber;
@@ -105,7 +106,7 @@ public class RobotScout {
         this.successfulClimbOnAnotherRobot = successfulClimbOnAnotherRobot;
         this.succesfulClimbWithAnotherRobotAttached = succesfulClimbWithAnotherRobotAttached;
         this.succesfulClimbOwn = succesfulClimbOwn;
-        this.defendefAgainstOpponents = defendefAgainstOpponents;
+        this.defenseAgainstOpponents = defenseAgainstOpponents;
         this.defensePlayedAgainstThem = defensePlayedAgainstThem;
         this.penalties = penalties;
     }
@@ -152,7 +153,7 @@ public class RobotScout {
         result.put("successfulClimbOnAnotherRobot", successfulClimbOnAnotherRobot);
         result.put("succesfulClimbWithAnotherRobotAttached", succesfulClimbWithAnotherRobotAttached);
         result.put("succesfulClimbOwn", succesfulClimbOwn);
-        result.put("defendefAgainstOpponents", defendefAgainstOpponents);
+        result.put("defendefAgainstOpponents", defenseAgainstOpponents);
         result.put("defensePlayedAgainstThem", defensePlayedAgainstThem);
         result.put("penalties", penalties);
 

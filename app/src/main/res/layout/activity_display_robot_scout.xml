@@ -810,7 +810,7 @@ android:buttonTint="#FFA500"
             app:layout_constraintTop_toBottomOf="@+id/checkBox11">
 
             <RadioButton
-                android:id="@+id/2cubeAuto"
+                android:id="@+id/cubeAutoTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="#FFA500"
