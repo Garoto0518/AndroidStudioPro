@@ -57,7 +57,7 @@ public class DisplayPitScout extends AppCompatActivity {
 
         Button pitSubmit = findViewById(R.id.pitSubmit);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Segunda");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Pit Scout");
         pitSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

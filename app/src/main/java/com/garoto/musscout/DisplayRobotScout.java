@@ -202,7 +202,7 @@ public class DisplayRobotScout extends AppCompatActivity {
 
         Button robotSubmit = findViewById(R.id.robotSubmit);
 //
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Primera");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Robot Scout");
         robotSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -232,7 +232,7 @@ public class DisplayRobotScout extends AppCompatActivity {
 
                 mDatabase.push().setValue(robotScout.toMap());
 
-                if ()
+              //  if ()
                 //}
 
             }

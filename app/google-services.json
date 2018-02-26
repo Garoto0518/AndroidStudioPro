@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "511597732982",
+    "firebase_url": "https://musscout-4dee8.firebaseio.com",
+    "project_id": "musscout-4dee8",
+    "storage_bucket": "musscout-4dee8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511597732982:android:fd675b94717ef7c1",
+        "android_client_info": {
+          "package_name": "com.garoto.musscout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511597732982-j0doo6ekm7fsdjibq609h4jotndkeonr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.garoto.musscout",
+            "certificate_hash": "92bc2771445132887881549bc39cf3c31bf71203"
+          }
+        },
+        {
+          "client_id": "511597732982-h66lodq4g58qediohubh9b17845c1o45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCFH3kWrff15SO7G9QytS9tVvWcWiSRKo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511597732982-h66lodq4g58qediohubh9b17845c1o45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
