@@ -1,20 +1,16 @@
 package com.garoto.musscout;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-//import android.widget.Button;
-//import android.widget.EditText;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -113,10 +109,11 @@ public class DisplayRobotScout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_robot_scout);
 
-        allianceTextView = (TextView) findViewById(R.id.allianceTextView);
-        scaleTextView = (TextView) findViewById(R.id.scaleTextView);
-        opponentTextView = (TextView) findViewById(R.id.opponentTextView);
-        exchangeTextView = (TextView) findViewById(R.id.exchangeTextView);
+//        allianceTextView =(TextView) findViewById(R.id.switchCounter);
+//        scaleTextView = (TextView) findViewById(R.id.scaleCounter);
+//        opponentTextView = (TextView) findViewById(R.id.opponentCounter);
+//        exchangeTextView = (TextView) findViewById(exchangeCounter);
+
         btnStart = (Button) findViewById(R.id.btnStart);
         btnPause = (Button) findViewById(R.id.btnPause);
         btnLap = (Button) findViewById(R.id.btnLap);
@@ -140,21 +137,21 @@ public class DisplayRobotScout extends AppCompatActivity {
         switch2CubeAuto = findViewById(R.id.switch2CubeAuto);
         cube3Auto = findViewById(R.id.checkBox12);
         scale3AutoCube = findViewById(R.id.radioButton11);
-        switch3CubeAuto = findViewById(R.id.c);
+        switch3CubeAuto = findViewById(R.id.switchMortalAuto);
         cubeWrongSideScaleSwitch = findViewById(R.id.checkBox3);
 
         //Tele-Op
-        allianceSwitch = findViewById(R.id.allianceTextView);
-        centerScale = findViewById(R.id.scaleTextView);
-        opponentSwitch = findViewById(R.id.opponentTextView);
-        exchangeSwitch = findViewById(R.id.exchangeTextView);
+        allianceTextView = findViewById(R.id.switchCounter);
+        scaleTextView = findViewById(R.id.scaleCounter);
+        opponentTextView = findViewById(R.id.opponentCounter);
+        exchangeTextView = findViewById(R.id.exchangeCounter);
         powerUpForce = findViewById(R.id.radioButton12);
         powerUpBoost = findViewById(R.id.radioButton13);
         powerUpLevitate = findViewById(R.id.radioButton14);
         anyCubeOnWrongSideScaleSwitch = findViewById(R.id.checkBox4);
         estimatedTimeScalePossesion = findViewById(R.id.editText);
         estimatedTimeSwitchPossesion = findViewById(R.id.editText2);
-        estimatedOpponentSwitchPossesion = findViewById(R.id.c);
+        estimatedOpponentSwitchPossesion = findViewById(R.id.textView6);
 
 
         //End Game
@@ -210,17 +207,33 @@ public class DisplayRobotScout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //    Intent intent = new Intent(DisplayRobotScout.this,row.class);
+
+
+                //   if(allianceSwitch != null && centerScale!= null) {
+
+//                }
+//                if ( scouterName != null && teamNumber != null && matchNumber != null && crossedAutoLine != null && noCubeAttempt != null && switchAttempted != null && scaleAttempted != null && scaleSuccessful != null
+//                        && switchSuccessful != null && cube2Auto != null && scale2CubeAuto != null && switch2CubeAuto != null && cube3Auto != null &&scale3AutoCube != null  && switch3CubeAuto != null && cubeWrongSideScaleSwitch != null
+//                        && allianceSwitch != null &&centerScale != null && opponentSwitch != null && exchangeSwitch != null && powerUpForce != null && powerUpBoost != null && powerUpLevitate != null && anyCubeOnWrongSideScaleSwitch != null &&
+//                        estimatedTimeScalePossesion != null && estimatedTimeSwitchPossesion!= null && estimatedTimeScalePossesion != null &&estimatedOpponentSwitchPossesion != null && notParkedOnPlatform != null && parkedOnPlatform != null && attemptedHookBar != null
+//                        && attemptedAttachRobot != null && attemptedCarryRobot != null && hookedBarAttemptedClimb != null && successfulClimbOnAnotherRobot != null && succesfulClimbWithAnotherRobotAttached != null &&succesfulClimbOwn != null && defenseAgainstOpponents != null &&
+//                        defensePlayedAgainstThem != null && penalties != null)
+//                {
+//
+//                }
                 RobotScout robotScout = new RobotScout(scouterName.getText().toString().trim(), teamNumber.getText().toString().trim(), matchNumber.getText().toString().trim(),
                         crossedAutoLine.isChecked(), noCubeAttempt.isSelected(), switchAttempted.isSelected(), scaleAttempted.isSelected(), scaleSuccessful.isSelected(),
-                        switchSuccessful.isChecked(), cube2Auto.isChecked(), scale2CubeAuto.isSelected(), switch2CubeAuto.isSelected(), cube3Auto.isChecked(), scale3AutoCube.isSelected(),
-                        switch3CubeAuto.isChecked(), cubeWrongSideScaleSwitch.isChecked(), allianceSwitch.getText().toString().trim(), centerScale.getText().toString().trim(),
-                        opponentSwitch.getText().toString().trim(), exchangeSwitch.getText().toString().trim(), powerUpForce.isChecked(), powerUpBoost.isChecked(), powerUpLevitate.isChecked(),
-                        anyCubeOnWrongSideScaleSwitch.isChecked(), estimatedTimeScalePossesion.getText().toString().trim(), estimatedTimeSwitchPossesion.getText().toString().trim(),
-                        estimatedOpponentSwitchPossesion.getText().toString().trim(), notParkedOnPlatform.isSelected(), parkedOnPlatform.isSelected(), attemptedHookBar.isSelected(), attemptedAttachRobot.isSelected(), attemptedCarryRobot.isSelected(),
-                        hookedBarAttemptedClimb.isSelected(), successfulClimbOnAnotherRobot.isSelected(), succesfulClimbWithAnotherRobotAttached.isSelected(), succesfulClimbOwn.isSelected(), defenseAgainstOpponents.isChecked(),
-                        defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
+                        switchSuccessful.isSelected(), cube2Auto.isChecked(), scale2CubeAuto.isSelected(), switch2CubeAuto.isSelected(), cube3Auto.isChecked(), scale3AutoCube.isSelected(),
+                        switch3CubeAuto.isSelected(), cubeWrongSideScaleSwitch.isChecked(), allianceTextView.getText().toString().trim(), scaleTextView.getText().toString().trim(),
+                        opponentTextView.getText().toString().trim(), exchangeTextView.getText().toString().trim(), powerUpForce.isChecked(), powerUpBoost.isChecked(), powerUpLevitate.isChecked(), anyCubeOnWrongSideScaleSwitch.isChecked(),
+                        estimatedTimeScalePossesion.getText().toString().trim(), estimatedTimeSwitchPossesion.getText().toString().trim(), estimatedOpponentSwitchPossesion.getText().toString().trim(), notParkedOnPlatform.isSelected(), parkedOnPlatform.isSelected(), attemptedHookBar.isSelected(),
+                        attemptedAttachRobot.isSelected(), attemptedCarryRobot.isSelected(), hookedBarAttemptedClimb.isSelected(), successfulClimbOnAnotherRobot.isSelected(), succesfulClimbWithAnotherRobotAttached.isSelected(),
+                        succesfulClimbOwn.isSelected(), defenseAgainstOpponents.isChecked(), defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
 
                 mDatabase.push().setValue(robotScout.toMap());
+
+                if ()
+                //}
 
             }
         });

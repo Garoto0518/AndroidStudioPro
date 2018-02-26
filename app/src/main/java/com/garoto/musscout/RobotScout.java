@@ -61,10 +61,11 @@ public class RobotScout {
     private boolean defensePlayedAgainstThem;
     private String penalties;
 
-    public RobotScout(String scouterName, String teamNumber, String matchNumber, boolean crossedAutoLine, boolean noCubeAttempt,
-                      boolean switchAttempted, boolean scaleAttempted, boolean scaleSuccessful,
-                      boolean switchSuccessful, boolean cube2Auto, boolean scale2CubeAuto, boolean switch2CubeAuto, boolean cube3Auto, boolean scale3CubeAuto, boolean switch3CubeAuto, boolean cubeWrongSideScaleSwitch,
-                      String allianceSwitch, String centerScale, String opponentSwitch, String exchangeSwitch, boolean powerUpForce, boolean powerUpBoost, boolean powerUpLevitate, boolean anyCubeOnWrongSideScaleSwitch,
+    public RobotScout(String scouterName, String teamNumber, String matchNumber,
+                      boolean crossedAutoLine, boolean noCubeAttempt, boolean switchAttempted, boolean scaleAttempted, boolean scaleSuccessful,
+                      boolean switchSuccessful, boolean cube2Auto, boolean scale2CubeAuto, boolean switch2CubeAuto, boolean cube3Auto, boolean scale3CubeAuto,
+                      boolean switch3CubeAuto, boolean cubeWrongSideScaleSwitch, String allianceSwitch, String centerScale,
+                      String opponentSwitch, String exchangeSwitch, boolean powerUpForce, boolean powerUpBoost, boolean powerUpLevitate, boolean anyCubeOnWrongSideScaleSwitch,
                       String estimatedTimeScalePossesion, String estimatedTimeSwitchPossesion, String estimatedOpponentSwitchPossesion, boolean notParkedOnPlatform, boolean parkedOnPlatform, boolean attemptedHookBar,
                       boolean attemptedAttachRobot, boolean attemptedCarryRobot, boolean hookedBarAttemptedClimb, boolean successfulClimbOnAnotherRobot, boolean succesfulClimbWithAnotherRobotAttached,
                       boolean succesfulClimbOwn, boolean defenseAgainstOpponents, boolean defensePlayedAgainstThem, String penalties) {

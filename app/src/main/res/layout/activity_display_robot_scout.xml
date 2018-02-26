@@ -21,11 +21,11 @@
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/allianceTextView"
+            app:layout_constraintStart_toEndOf="@+id/switchCounter"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/allianceTextView"
+            android:id="@+id/switchCounter"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
@@ -233,11 +233,11 @@
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/scaleTextView"
+            app:layout_constraintStart_toEndOf="@+id/scaleCounter"
             app:layout_constraintTop_toBottomOf="@+id/plusBtn" />
 
         <TextView
-            android:id="@+id/scaleTextView"
+            android:id="@+id/scaleCounter"
             android:layout_width="89dp"
             android:layout_height="47dp"
             android:layout_marginEnd="8dp"
@@ -257,7 +257,7 @@
             android:text="Center Scale"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/allianceTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/switchCounter" />
 
         <Button
             android:id="@+id/button8"
@@ -267,7 +267,7 @@
             android:background="#FFA500"
             android:onClick="opponentCounterDec"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/opponentTextView"
+            app:layout_constraintEnd_toStartOf="@+id/opponentCounter"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -284,11 +284,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/opponentTextView"
+            app:layout_constraintStart_toEndOf="@+id/opponentCounter"
             app:layout_constraintTop_toBottomOf="@+id/plusBtn1" />
 
         <TextView
-            android:id="@+id/opponentTextView"
+            android:id="@+id/opponentCounter"
             android:layout_width="88dp"
             android:layout_height="31dp"
             android:layout_marginTop="8dp"
@@ -308,7 +308,7 @@
             android:text="Opponent Switch"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scaleTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/scaleCounter" />
 
         <TextView
             android:id="@+id/textView25"
@@ -319,10 +319,10 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/opponentTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/opponentCounter" />
 
         <TextView
-            android:id="@+id/exchangeTextView"
+            android:id="@+id/exchangeCounter"
             android:layout_width="83dp"
             android:layout_height="45dp"
             android:layout_marginTop="8dp"
@@ -343,7 +343,7 @@
             android:background="#FFA500"
             android:onClick="exchangeCounterDec"
             android:text="-"
-            app:layout_constraintEnd_toStartOf="@+id/exchangeTextView"
+            app:layout_constraintEnd_toStartOf="@+id/exchangeCounter"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -359,7 +359,7 @@
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/exchangeTextView"
+            app:layout_constraintStart_toEndOf="@+id/exchangeCounter"
             app:layout_constraintTop_toBottomOf="@+id/button9" />
 
         <TextView
@@ -371,7 +371,7 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/exchangeTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/exchangeCounter" />
 
         <CheckBox
             android:id="@+id/radioButton12"
@@ -861,7 +861,7 @@ android:buttonTint="#FFA500"
                 android:text="Scale 3 Cube Auto" />
 
             <RadioButton
-                android:id="@+id/c"
+                android:id="@+id/switchMortalAuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
