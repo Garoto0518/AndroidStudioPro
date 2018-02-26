@@ -1,11 +1,13 @@
 package com.garoto.musscout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
@@ -66,6 +68,10 @@ public class DisplayPitScout extends AppCompatActivity {
                         robotHeight.getText().toString().trim(), canVisioning.isSelected());
 
                 mDatabase.push().setValue(pitScout.toMap());
+                Toast.makeText(getBaseContext(),"Data has been saved", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DisplayPitScout.this, DisplayMessageActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
     }

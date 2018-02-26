@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -231,8 +232,8 @@ public class DisplayRobotScout extends AppCompatActivity {
                         succesfulClimbOwn.isSelected(), defenseAgainstOpponents.isChecked(), defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
 
                 mDatabase.push().setValue(robotScout.toMap());
-
-              //  if ()
+                Toast.makeText(getBaseContext(),"Data has been saved", Toast.LENGTH_SHORT).show();
+                //  if ()
                 //}
 
             }
