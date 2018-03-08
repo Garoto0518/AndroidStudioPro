@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +58,7 @@ public class DisplayRobotScout extends AppCompatActivity {
     private TextView matchNumber;
 
     //Auto
+    private RadioGroup autoCubeLocation;
     private CheckBox crossedAutoLine;
     private RadioButton noCubeAttempt;
     private RadioButton switchAttempted;
@@ -128,6 +130,7 @@ public class DisplayRobotScout extends AppCompatActivity {
         matchNumber = findViewById(R.id.editText5);
 
         //Auto
+
         crossedAutoLine = findViewById(R.id.checkBox);
         noCubeAttempt = findViewById(R.id.checkBox2);
         switchAttempted = findViewById(R.id.checkBox5);
@@ -153,7 +156,7 @@ public class DisplayRobotScout extends AppCompatActivity {
         anyCubeOnWrongSideScaleSwitch = findViewById(R.id.checkBox4);
         ownershipPoints = findViewById(R.id.editText);
         vaultPoints = findViewById(R.id.editText2);
-        estimatedOpponentSwitchPossesion = findViewById(R.id.textView6);
+        // estimatedOpponentSwitchPossesion = findViewById(R.id.textView6);
 
 
         //End Game
@@ -225,19 +228,19 @@ public class DisplayRobotScout extends AppCompatActivity {
 //
 //                }
                 RobotScout robotScout = new RobotScout(scouterName.getText().toString().trim(), teamNumber.getText().toString().trim(), matchNumber.getText().toString().trim(),
-                        crossedAutoLine.isChecked(), noCubeAttempt.isSelected(), switchAttempted.isSelected(), scaleAttempted.isSelected(), scaleSuccessful.isSelected(),
-                        switchSuccessful.isSelected(), cube2Auto.isChecked(), scale2CubeAuto.isSelected(), switch2CubeAuto.isSelected(), cube3Auto.isChecked(), scale3AutoCube.isSelected(),
-                        switch3CubeAuto.isSelected(), cubeWrongSideScaleSwitch.isChecked(), allianceTextView.getText().toString().trim(), scaleTextView.getText().toString().trim(),
+                        crossedAutoLine.isChecked(), noCubeAttempt.isChecked(), switchAttempted.isChecked(), scaleAttempted.isChecked(), scaleSuccessful.isChecked(),
+                        switchSuccessful.isChecked(), cube2Auto.isChecked(), scale2CubeAuto.isChecked(), switch2CubeAuto.isChecked(), cube3Auto.isChecked(), scale3AutoCube.isChecked(),
+                        switch3CubeAuto.isChecked(), cubeWrongSideScaleSwitch.isChecked(), allianceTextView.getText().toString().trim(), scaleTextView.getText().toString().trim(),
                         opponentTextView.getText().toString().trim(), exchangeTextView.getText().toString().trim(), powerUpForce.isChecked(), powerUpBoost.isChecked(), powerUpLevitate.isChecked(), anyCubeOnWrongSideScaleSwitch.isChecked(),
-                        ownershipPoints.getText().toString().trim(), vaultPoints.getText().toString().trim(), notParkedOnPlatform.isSelected(), parkedOnPlatform.isSelected(), attemptedHookBar.isSelected(),
-                        attemptedAttachRobot.isSelected(), attemptedCarryRobot.isSelected(), hookedBarAttemptedClimb.isSelected(), successfulClimbOnAnotherRobot.isSelected(), succesfulClimbWithAnotherRobotAttached.isSelected(),
-                        succesfulClimbOwn.isSelected(), defenseAgainstOpponents.isChecked(), defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
+                        ownershipPoints.getText().toString().trim(), vaultPoints.getText().toString().trim(), notParkedOnPlatform.isChecked(), parkedOnPlatform.isChecked(), attemptedHookBar.isChecked(),
+                        attemptedAttachRobot.isChecked(), attemptedCarryRobot.isChecked(), hookedBarAttemptedClimb.isChecked(), successfulClimbOnAnotherRobot.isChecked(), succesfulClimbWithAnotherRobotAttached.isChecked(),
+                        succesfulClimbOwn.isChecked(), defenseAgainstOpponents.isChecked(), defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
 
 
                 //estimatedOpponentSwitchPossesion.getText().toString().trim()
                 //  mDatabase = FirebaseDatabase.getInstance().getReference().
-                mDatabase.child(teamNumber.getText().trim()).setValue(robotScout.toMap());
-                //    mDatabase.push().setValue(robotScout.toMap());
+                // mDatabase.child(teamNumber.getText().trim()).setValue(robotScout.toMap());
+                mDatabase.push().setValue(robotScout.toMap());
 
 
                 Toast.makeText(getBaseContext(), "Data has been saved", Toast.LENGTH_SHORT).show();

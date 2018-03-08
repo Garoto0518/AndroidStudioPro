@@ -29,7 +29,7 @@ public class DisplayPitScout extends AppCompatActivity {
     private TextView comments;
     private TextView howManyRegionals;
     private TextView robotHeight;
-
+    String equipo;
     private RadioButton canVisioning;
 
 
@@ -47,6 +47,7 @@ public class DisplayPitScout extends AppCompatActivity {
         mechanism = findViewById(R.id.editText10);
 
         canSwitch = findViewById(R.id.radioButton);
+        // canSwitch = findViewById(R.id.radioButton2);
         canScale = findViewById(R.id.radioButton3);
         canAuto = findViewById(R.id.radioButton5);
         robotWeight = findViewById(R.id.editText15);
@@ -64,12 +65,13 @@ public class DisplayPitScout extends AppCompatActivity {
         pitSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PitScout pitScout = new PitScout(teamNumber.getText().toString().trim(), wheelType.getText().toString().trim(), driveTrain.getText().toString().trim(), mechanism.getText().toString().trim(), canSwitch.isSelected(),
-                        canScale.isSelected(), canAuto.isSelected(), robotWeight.getText().toString().trim(), cubesPerMatch.getText().toString().trim(), comments.getText().toString().trim(), howManyRegionals.getText().toString().trim(),
-                        robotHeight.getText().toString().trim(), canVisioning.isSelected());
+                PitScout pitScout = new PitScout(teamNumber.getText().toString().trim(), wheelType.getText().toString().trim(), driveTrain.getText().toString().trim(), mechanism.getText().toString().trim(), canSwitch.isChecked(),
+                        canScale.isChecked(), canAuto.isChecked(), robotWeight.getText().toString().trim(), cubesPerMatch.getText().toString().trim(), comments.getText().toString().trim(), howManyRegionals.getText().toString().trim(),
+                        robotHeight.getText().toString().trim(), canVisioning.isChecked());
 
+                //  String   equipo = teamNumber.getText();
                 mDatabase.push().setValue(pitScout.toMap());
-                mDatabase.child(teamNumber.getText().trim()).setValue(pitScout.toMap());
+                //    mDatabase.child(teamNumber.getText()).setValue(pitScout.toMap());
                 Toast.makeText(getBaseContext(), "Data has been saved", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DisplayPitScout.this, DisplayMessageActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
