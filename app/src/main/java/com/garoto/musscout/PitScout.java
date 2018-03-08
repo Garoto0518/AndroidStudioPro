@@ -48,19 +48,19 @@ public class PitScout {
     public Map<String, Object> toMap() {
         HashMap<String, Object> pitResult = new HashMap<>();
 
-        pitResult.put("teamNumber", teamNumber);
-        pitResult.put("wheelType", wheelType);
-        pitResult.put("driveTrain", driveTrain);
-        pitResult.put("mechanism", mechanism);
-        pitResult.put("canSwitch", canSwitch);
-        pitResult.put("canScale", canScale);
-        pitResult.put("canAuto", canAuto);
-        pitResult.put("robotWeight", robotWeight);
-        pitResult.put("cubesPerMatch", cubesPerMatch);
-        pitResult.put("comments", comments);
-        pitResult.put("howManyRegionals", howManyRegionals);
-        pitResult.put("robotHeight", robotHeight);
-        pitResult.put("canVisioning", canVisioning);
+        pitResult.put("Team Number", teamNumber);
+        pitResult.put("Wheel Type", wheelType);
+        pitResult.put("Drive Train", driveTrain);
+        pitResult.put("Mechanism", mechanism);
+        pitResult.put("Can Switch", canSwitch);
+        pitResult.put("Can Scale", canScale);
+        pitResult.put("Can Auto", canAuto);
+        pitResult.put("Robot Weight", robotWeight);
+        pitResult.put("Cubes Per Match", cubesPerMatch);
+        pitResult.put("Comments", comments);
+        pitResult.put("How Many Regionals", howManyRegionals);
+        pitResult.put("Robot Height", robotHeight);
+        pitResult.put("Can Visioning", canVisioning);
 
         return pitResult;
 

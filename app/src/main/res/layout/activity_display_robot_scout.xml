@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Autonomous"
+            android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -68,6 +69,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Auto Cube Location"
+            android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -163,6 +165,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Tele-Op Scouting"
+            android:textStyle="bold"
+
             android:textSize="20dp"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -219,6 +223,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Alliance Switch"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -255,6 +261,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Center Scale"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/switchCounter" />
@@ -293,7 +300,7 @@
             android:layout_height="31dp"
             android:layout_marginTop="8dp"
             android:text="Click Counter"
-            android:textAlignment="center"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -306,6 +313,8 @@
             android:layout_height="29dp"
             android:layout_marginTop="8dp"
             android:text="Opponent Switch"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/scaleCounter" />
@@ -315,6 +324,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
             android:text="Exchange Counter"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -368,6 +379,8 @@
             android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:text="Power Up"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -412,12 +425,14 @@ android:buttonTint="#FFA500"
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="112dp"
             android:text="Robot End Game Scouting"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -573,6 +588,8 @@ android:buttonTint="#FFA500"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:text="Defense:"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/endGameRadioGroup" />
 
@@ -598,7 +615,9 @@ android:buttonTint="#FFA500"
             android:layout_height="20dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
-            android:text="Estimated time Scale Posession"
+            android:text="Ownership Points"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
@@ -608,7 +627,9 @@ android:buttonTint="#FFA500"
             android:layout_height="0dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
-            android:text="Estimated time Switch Posession"
+            android:text="Vault Points"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -627,32 +648,6 @@ android:buttonTint="#FFA500"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
-            android:text="Estimated opponent switch posession"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <EditText
-            android:id="@+id/c"
-            android:layout_width="102dp"
-            android:layout_height="34dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.77"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
         <Button
             android:id="@+id/robotSubmit"
@@ -674,6 +669,7 @@ android:buttonTint="#FFA500"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
             android:text="Team Number"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/editText4"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView33" />
@@ -697,6 +693,7 @@ android:buttonTint="#FFA500"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="36dp"
             android:text="Match Number"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/editText5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
@@ -721,6 +718,7 @@ android:buttonTint="#FFA500"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
             android:text="Scouter"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/editText6"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -756,6 +754,8 @@ android:buttonTint="#FFA500"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:text="Penalties:"
+            android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
@@ -872,49 +872,49 @@ android:buttonTint="#FFA500"
         <!--start of crazy studdd-->
 
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_marginTop="148dp"
-            android:orientation="horizontal"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/linearLayout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="65dp"-->
+            <!--android:layout_marginTop="148dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/checkBox4">-->
 
-            <TextView
-                android:id="@+id/timerValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="00:00:00"
-                android:textColor="#000"
-                android:textSize="40sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="1319dp" />
+            <!--<TextView-->
+                <!--android:id="@+id/timerValue"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:text="00:00:00"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="40sp"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--app:layout_constraintRight_toRightOf="parent"-->
+                <!--tools:layout_editor_absoluteY="1319dp" />-->
 
-            <Button
-                android:id="@+id/btnStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Start" />
+            <!--<Button-->
+                <!--android:id="@+id/btnStart"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Start" />-->
 
-            <Button
-                android:id="@+id/btnPause"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Pause" />
+            <!--<Button-->
+                <!--android:id="@+id/btnPause"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Pause" />-->
 
-            <Button
-                android:id="@+id/btnLap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Lap" />
+            <!--<Button-->
+                <!--android:id="@+id/btnLap"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Lap" />-->
             <!--<Button-->
             <!--android:layout_width="fill_parent"-->
             <!--android:layout_height="wrap_content"-->
@@ -922,22 +922,22 @@ android:buttonTint="#FFA500"
             <!--android:layout_below=-->
 
             <!--/>-->
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:id="@+id/container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    ></LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/container"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--&gt;</LinearLayout>-->
+            <!--</ScrollView>-->
+        <!--</LinearLayout>-->
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

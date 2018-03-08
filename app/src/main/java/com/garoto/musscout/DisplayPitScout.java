@@ -60,6 +60,7 @@ public class DisplayPitScout extends AppCompatActivity {
         Button pitSubmit = findViewById(R.id.pitSubmit);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Pit Scout");
+        mDatabase.keepSynced(true);
         pitSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +69,8 @@ public class DisplayPitScout extends AppCompatActivity {
                         robotHeight.getText().toString().trim(), canVisioning.isSelected());
 
                 mDatabase.push().setValue(pitScout.toMap());
-                Toast.makeText(getBaseContext(),"Data has been saved", Toast.LENGTH_SHORT).show();
+                mDatabase.child(teamNumber.getText().trim()).setValue(pitScout.toMap());
+                Toast.makeText(getBaseContext(), "Data has been saved", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DisplayPitScout.this, DisplayMessageActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

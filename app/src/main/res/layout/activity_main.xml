@@ -22,6 +22,7 @@
             android:layout_marginTop="12dp"
             android:text="Wheel Type"
             android:textSize="20dp"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -48,6 +49,7 @@
             android:layout_marginTop="20dp"
             android:text="Drive Train"
             android:textSize="20dp"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -73,6 +75,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:text="Mechanism"
+            android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -99,7 +102,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Switch?"
-
+            android:textStyle="bold"
             android:backgroundTint="#FFA500"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -139,6 +142,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="28dp"
             android:text="Team Number"
+            android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -213,6 +217,7 @@
             android:layout_height="33dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:textStyle="bold"
             android:text="Scale?"
             android:backgroundTint="#FFA500"
             app:layout_constraintStart_toStartOf="parent"
@@ -258,6 +263,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:text="Auto?"
+            android:textStyle="bold"
             android:drawableTint="#FFA500"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -271,6 +277,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="40dp"
             android:text="Robot Weight"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -296,6 +303,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="36dp"
+            android:textStyle="bold"
             android:text="Cubes per match"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -322,6 +330,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:text="Regionals?"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
@@ -345,6 +354,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Robot Height"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -355,6 +365,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Visioning?"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -427,6 +438,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:textStyle="bold"
             android:text="Climbing Mechanism"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"

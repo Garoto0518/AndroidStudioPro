@@ -1,6 +1,7 @@
 package com.garoto.musscout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -79,8 +80,8 @@ public class DisplayRobotScout extends AppCompatActivity {
     private CheckBox powerUpBoost;
     private CheckBox powerUpLevitate;
     private CheckBox anyCubeOnWrongSideScaleSwitch;
-    private TextView estimatedTimeScalePossesion;
-    private TextView estimatedTimeSwitchPossesion;
+    private TextView ownershipPoints;
+    private TextView vaultPoints;
     private TextView estimatedOpponentSwitchPossesion;
 
 
@@ -115,11 +116,11 @@ public class DisplayRobotScout extends AppCompatActivity {
 //        opponentTextView = (TextView) findViewById(R.id.opponentCounter);
 //        exchangeTextView = (TextView) findViewById(exchangeCounter);
 
-        btnStart = (Button) findViewById(R.id.btnStart);
-        btnPause = (Button) findViewById(R.id.btnPause);
-        btnLap = (Button) findViewById(R.id.btnLap);
-        txtTimer = (TextView) findViewById(R.id.timerValue);
-        container = (LinearLayout) findViewById(R.id.container);
+//        btnStart = (Button) findViewById(R.id.btnStart);
+//        btnPause = (Button) findViewById(R.id.btnPause);
+//        btnLap = (Button) findViewById(R.id.btnLap);
+//        txtTimer = (TextView) findViewById(R.id.timerValue);
+//        container = (LinearLayout) findViewById(R.id.container);
 
 
         scouterName = findViewById(R.id.editText6);
@@ -150,8 +151,8 @@ public class DisplayRobotScout extends AppCompatActivity {
         powerUpBoost = findViewById(R.id.radioButton13);
         powerUpLevitate = findViewById(R.id.radioButton14);
         anyCubeOnWrongSideScaleSwitch = findViewById(R.id.checkBox4);
-        estimatedTimeScalePossesion = findViewById(R.id.editText);
-        estimatedTimeSwitchPossesion = findViewById(R.id.editText2);
+        ownershipPoints = findViewById(R.id.editText);
+        vaultPoints = findViewById(R.id.editText2);
         estimatedOpponentSwitchPossesion = findViewById(R.id.textView6);
 
 
@@ -172,38 +173,39 @@ public class DisplayRobotScout extends AppCompatActivity {
         penalties = findViewById(R.id.editText9);
 
         //StopWatch Start
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startTime = SystemClock.uptimeMillis();
-                customHandler.postDelayed(updateTimeThread, 0);
-            }
-        });
+//        btnStart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startTime = SystemClock.uptimeMillis();
+//                customHandler.postDelayed(updateTimeThread, 0);
+//            }
+//        });
 
-        btnPause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                timeSwapBuff += timeInMillisseconds;
-                customHandler.removeCallbacks(updateTimeThread);
-            }
-        });
+//        btnPause.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                timeSwapBuff += timeInMillisseconds;
+//                customHandler.removeCallbacks(updateTimeThread);
+//            }
+//        });
 
-        btnLap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LayoutInflater inflater = (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View addView = inflater.inflate(R.layout.row, null);
-                TextView txtValue = (TextView) addView.findViewById(R.id.txtContent);
-                txtValue.setText(txtTimer.getText());
-                container.addView(addView);
-            }
-        });
+//        btnLap.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                LayoutInflater inflater = (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                View addView = inflater.inflate(R.layout.row, null);
+//                TextView txtValue = (TextView) addView.findViewById(R.id.txtContent);
+//                txtValue.setText(txtTimer.getText());
+//                container.addView(addView);
+//            }
+//        });
 // End of StopWatch
 
 
         Button robotSubmit = findViewById(R.id.robotSubmit);
 //
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Robot Scout");
+        mDatabase.keepSynced(true);
         robotSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -227,12 +229,21 @@ public class DisplayRobotScout extends AppCompatActivity {
                         switchSuccessful.isSelected(), cube2Auto.isChecked(), scale2CubeAuto.isSelected(), switch2CubeAuto.isSelected(), cube3Auto.isChecked(), scale3AutoCube.isSelected(),
                         switch3CubeAuto.isSelected(), cubeWrongSideScaleSwitch.isChecked(), allianceTextView.getText().toString().trim(), scaleTextView.getText().toString().trim(),
                         opponentTextView.getText().toString().trim(), exchangeTextView.getText().toString().trim(), powerUpForce.isChecked(), powerUpBoost.isChecked(), powerUpLevitate.isChecked(), anyCubeOnWrongSideScaleSwitch.isChecked(),
-                        estimatedTimeScalePossesion.getText().toString().trim(), estimatedTimeSwitchPossesion.getText().toString().trim(), estimatedOpponentSwitchPossesion.getText().toString().trim(), notParkedOnPlatform.isSelected(), parkedOnPlatform.isSelected(), attemptedHookBar.isSelected(),
+                        ownershipPoints.getText().toString().trim(), vaultPoints.getText().toString().trim(), notParkedOnPlatform.isSelected(), parkedOnPlatform.isSelected(), attemptedHookBar.isSelected(),
                         attemptedAttachRobot.isSelected(), attemptedCarryRobot.isSelected(), hookedBarAttemptedClimb.isSelected(), successfulClimbOnAnotherRobot.isSelected(), succesfulClimbWithAnotherRobotAttached.isSelected(),
                         succesfulClimbOwn.isSelected(), defenseAgainstOpponents.isChecked(), defensePlayedAgainstThem.isChecked(), penalties.getText().toString().trim());
 
-                mDatabase.push().setValue(robotScout.toMap());
-                Toast.makeText(getBaseContext(),"Data has been saved", Toast.LENGTH_SHORT).show();
+
+                //estimatedOpponentSwitchPossesion.getText().toString().trim()
+                //  mDatabase = FirebaseDatabase.getInstance().getReference().
+                mDatabase.child(teamNumber.getText().trim()).setValue(robotScout.toMap());
+                //    mDatabase.push().setValue(robotScout.toMap());
+
+
+                Toast.makeText(getBaseContext(), "Data has been saved", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DisplayRobotScout.this, DisplayMessageActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 //  if ()
                 //}
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by felix on 2/19/2018.
+ * Created by felix & Garoto on 2/19/2018.
  */
 
 public class RobotScout {
@@ -39,9 +39,9 @@ public class RobotScout {
     private boolean powerUpBoost;
     private boolean powerUpLevitate;
     private boolean anyCubeOnWrongSideScaleSwitch;
-    private String estimatedTimeScalePossesion;
-    private String estimatedTimeSwitchPossesion;
-    private String estimatedOpponentSwitchPossesion;
+    private String ownershipPoints;
+    private String vaultPoints;
+//    private String estimatedOpponentSwitchPossesion;
 
     //Robot End Game Scouting
 
@@ -66,10 +66,10 @@ public class RobotScout {
                       boolean switchSuccessful, boolean cube2Auto, boolean scale2CubeAuto, boolean switch2CubeAuto, boolean cube3Auto, boolean scale3CubeAuto,
                       boolean switch3CubeAuto, boolean cubeWrongSideScaleSwitch, String allianceSwitch, String centerScale,
                       String opponentSwitch, String exchangeSwitch, boolean powerUpForce, boolean powerUpBoost, boolean powerUpLevitate, boolean anyCubeOnWrongSideScaleSwitch,
-                      String estimatedTimeScalePossesion, String estimatedTimeSwitchPossesion, String estimatedOpponentSwitchPossesion, boolean notParkedOnPlatform, boolean parkedOnPlatform, boolean attemptedHookBar,
+                      String ownershipPoints, String vaultPoints, boolean notParkedOnPlatform, boolean parkedOnPlatform, boolean attemptedHookBar,
                       boolean attemptedAttachRobot, boolean attemptedCarryRobot, boolean hookedBarAttemptedClimb, boolean successfulClimbOnAnotherRobot, boolean succesfulClimbWithAnotherRobotAttached,
                       boolean succesfulClimbOwn, boolean defenseAgainstOpponents, boolean defensePlayedAgainstThem, String penalties) {
-
+        // String estimatedOpponentSwitchPossesion,
         this.scouterName = scouterName;
         this.teamNumber = teamNumber;
         this.matchNumber = matchNumber;
@@ -95,9 +95,9 @@ public class RobotScout {
         this.powerUpBoost = powerUpBoost;
         this.powerUpLevitate = powerUpLevitate;
         this.anyCubeOnWrongSideScaleSwitch = anyCubeOnWrongSideScaleSwitch;
-        this.estimatedTimeScalePossesion = estimatedTimeScalePossesion;
-        this.estimatedTimeSwitchPossesion = estimatedTimeSwitchPossesion;
-        this.estimatedOpponentSwitchPossesion = estimatedOpponentSwitchPossesion;
+        this.ownershipPoints = ownershipPoints;
+        this.vaultPoints = vaultPoints;
+        //   this.estimatedOpponentSwitchPossesion = estimatedOpponentSwitchPossesion;
         this.notParkedOnPlatform = notParkedOnPlatform;
         this.parkedOnPlatform = parkedOnPlatform;
         this.attemptedHookBar = attemptedHookBar;
@@ -117,46 +117,46 @@ public class RobotScout {
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
 
-        result.put("scouterName", scouterName);
-        result.put("teamNumber", teamNumber);
-        result.put("matchNumber", matchNumber);
-        result.put("crossedAutoLine", crossedAutoLine);
-        result.put("noCubeAttempt", noCubeAttempt);
+        result.put("Scouter Name", scouterName);
+        result.put("Team Number", teamNumber);
+        result.put("Match Number", matchNumber);
+        result.put("Crossed AutoLine", crossedAutoLine);
+        result.put("NoCube Attempt", noCubeAttempt);
 
-        result.put("switchAttempted", switchAttempted);
-        result.put("scaleAttempted", scaleAttempted);
-        result.put("scaleSuccessful", scaleSuccessful);
-        result.put("switchSuccessful", switchSuccessful);
-        result.put("cube2Auto", cube2Auto);
-        result.put("scale2CubeAuto", scale2CubeAuto);
-        result.put("switch2CubeAuto", switch2CubeAuto);
-        result.put("cube3Auto", cube3Auto);
-        result.put("scale3CubeAuto", scale3CubeAuto);
+        result.put("Switch Attempted", switchAttempted);
+        result.put("Scale Attempted", scaleAttempted);
+        result.put("Scale Successful", scaleSuccessful);
+        result.put("Switch Successful", switchSuccessful);
+        result.put("2 CubeAuto", cube2Auto);
+        result.put("2 Scale CubeAuto", scale2CubeAuto);
+        result.put("2 Switch CubeAuto", switch2CubeAuto);
+        result.put("3 cubeAuto", cube3Auto);
+        result.put("3 Scale CubeAuto", scale3CubeAuto);
         result.put("switch3CubeAuto", switch3CubeAuto);
-        result.put("cubeWrongSideScaleSwitch", cubeWrongSideScaleSwitch);
-        result.put("allianceSwitch", allianceSwitch);
-        result.put("centerScale", centerScale);
-        result.put("opponentSwitch", opponentSwitch);
-        result.put("exchangeSwitch", exchangeSwitch);
-        result.put("powerUpForce", powerUpForce);
-        result.put("powerUpBoost", powerUpBoost);
-        result.put("powerUpLevitate", powerUpLevitate);
-        result.put("anyCubeOnWrongSideScaleSwitch", anyCubeOnWrongSideScaleSwitch);
-        result.put("estimatedTimeScalePossesion", estimatedTimeScalePossesion);
-        result.put("estimatedTimeSwitchPossesion", estimatedTimeSwitchPossesion);
-        result.put("estimatedOpponentSwitchPossesion", estimatedOpponentSwitchPossesion);
-        result.put("notParkedOnPlatform", notParkedOnPlatform);
-        result.put("parkedOnPlatform", parkedOnPlatform);
-        result.put("attemptedHookBar", attemptedHookBar);
-        result.put("attemptedAttachRobot", attemptedAttachRobot);
-        result.put("attemptedCarryRobot", attemptedCarryRobot);
-        result.put("hookedBarAttemptedClimb", hookedBarAttemptedClimb);
-        result.put("successfulClimbOnAnotherRobot", successfulClimbOnAnotherRobot);
-        result.put("succesfulClimbWithAnotherRobotAttached", succesfulClimbWithAnotherRobotAttached);
-        result.put("succesfulClimbOwn", succesfulClimbOwn);
-        result.put("defendefAgainstOpponents", defenseAgainstOpponents);
-        result.put("defensePlayedAgainstThem", defensePlayedAgainstThem);
-        result.put("penalties", penalties);
+        result.put("Cube on WrongSide of ScaleSwitch", cubeWrongSideScaleSwitch);
+        result.put("Alliance Switch Cubes", allianceSwitch);
+        result.put("Center Scale Cube", centerScale);
+        result.put("Opponent Switch Cube", opponentSwitch);
+        result.put("Exchange Switch Cube", exchangeSwitch);
+        result.put("Force PowerUp", powerUpForce);
+        result.put("Boost PowerUp", powerUpBoost);
+        result.put("Levitate PowerUp", powerUpLevitate);
+        result.put("Cubes on wrong side Scale", anyCubeOnWrongSideScaleSwitch);
+        result.put("Ownership Points", ownershipPoints);
+        result.put("Vault Points", vaultPoints);
+        // result.put("estimatedOpponentSwitchPossesion", estimatedOpponentSwitchPossesion);
+        result.put("Not Parked on Platform", notParkedOnPlatform);
+        result.put("Parked On Platform", parkedOnPlatform);
+        result.put("Attempted to HookBar", attemptedHookBar);
+        result.put("Attempted to Attach to a Robot", attemptedAttachRobot);
+        result.put("Attempted to Carry a Robot", attemptedCarryRobot);
+        result.put("Hooked to Bar AttemptedClimb", hookedBarAttemptedClimb);
+        result.put("Successful Climb On AnotherRobot", successfulClimbOnAnotherRobot);
+        result.put("Successful ClimbWithAnotherRobotAttached", succesfulClimbWithAnotherRobotAttached);
+        result.put("Successful ClimbOwn", succesfulClimbOwn);
+        result.put("Defended Against Opponents", defenseAgainstOpponents);
+        result.put("Defense Played AgainstThem", defensePlayedAgainstThem);
+        result.put("Penalties", penalties);
 
 
         return result;
